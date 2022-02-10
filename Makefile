@@ -14,7 +14,37 @@ IOPL_LIB=
 
 OS	!= uname
 
+OBJCOPY=
+
 .if ${OS} == "OpenBSD"
+OBJCOPY=objcopy
+.if ${MACHINE_ARCH} == "amd64"
+IOPL_LIB=-lamd64
+.elif ${MACHINE_ARCH} == "i386"
+IOPL_LIB=-li386
+.endif
+.endif
+
+.if ${OS} == "Darwin"
+OBJCOPY=gobjcopy
+.if ${MACHINE_ARCH} == "amd64"
+IOPL_LIB=-lamd64
+.elif ${MACHINE_ARCH} == "i386"
+IOPL_LIB=-li386
+.endif
+.endif
+
+.if ${OS} == "Linux"
+OBJCOPY=gobjcopy
+.if ${MACHINE_ARCH} == "amd64"
+IOPL_LIB=-lamd64
+.elif ${MACHINE_ARCH} == "i386"
+IOPL_LIB=-li386
+.endif
+.endif
+
+.if ${OS} == "Windows_NT"
+OBJCOPY=gobjcopy
 .if ${MACHINE_ARCH} == "amd64"
 IOPL_LIB=-lamd64
 .elif ${MACHINE_ARCH} == "i386"
@@ -41,7 +71,7 @@ loader.ihx: loader.rel
 	$(SDCC) --no-std-crt0 -o $@ $>
 
 loader.bin: loader.ihx
-	objcopy -Iihex -Obinary $> $@
+	$(OBJCOPY) -Iihex -Obinary $> $@
 
 # dataflash loader
 dataflashloader.rel: dataflashloader.asm
@@ -51,7 +81,7 @@ dataflashloader.ihx: dataflashloader.rel
 	$(SDCC) --no-std-crt0 -o $@ $>
 
 dataflashloader.bin: dataflashloader.ihx
-	objcopy -Iihex -Obinary $> $@
+	$(OBJCOPY) -Iihex -Obinary $> $@
 
 
 # parallel dumpers, codeflash and dataflash
@@ -62,7 +92,7 @@ codedump.ihx: codedump.rel
 	$(SDCC) --no-std-crt0 -o $@ $>
 
 codedump.bin: codedump.ihx
-	objcopy -Iihex -Obinary $> $@
+	$(OBJCOPY) -Iihex -Obinary $> $@
 
 datadump.rel: datadump.asm
 	$(ASZ80) -o $@ $>
@@ -71,7 +101,7 @@ datadump.ihx: datadump.rel
 	$(SDCC) --no-std-crt0 -o $@ $>
 
 datadump.bin: datadump.ihx
-	objcopy -Iihex -Obinary $> $@
+	$(OBJCOPY) -Iihex -Obinary $> $@
 
 memdump.rel: memdump.asm
 	$(ASZ80) -o $@ $>
@@ -80,7 +110,7 @@ memdump.ihx: memdump.rel
 	$(SDCC) --no-std-crt0 -o $@ $>
 
 memdump.bin: memdump.ihx
-	objcopy -Iihex -Obinary $> $@
+	$(OBJCOPY) -Iihex -Obinary $> $@
 
 # datadump/codedump receiver
 recvdump: util/recvdump.c util/tribble.c

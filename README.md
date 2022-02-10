@@ -1,7 +1,8 @@
 ## mailstation-tools
+Original Repo created by jcs(https://github.com/jcs) ported to other OS's and improved by manamster(https://github.com/manamster)
 
 This is a collection of tools for working with Cidco Mailstation devices
-(primarily the DET1), from a Unix machine.
+(primarily the DET1), either on Windows, MacOS, or Linux.
 
 It was mostly pieced together from the now-defunct
 [mailstation Yahoo Group](https://groups.yahoo.com/neo/groups/mailstation/info)
@@ -21,9 +22,6 @@ assemblers.
 
 ### Compiling
 
-Install [SDCC](http://sdcc.sourceforge.net/).
-
-Create an `obj` directory with `mkdir obj` and then run `make`. (If your system `make` is GNU Make, install and use `bmake` for this project.)
 
 ### Loading code onto the Mailstation
 
