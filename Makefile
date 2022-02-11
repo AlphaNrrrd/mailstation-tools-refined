@@ -28,7 +28,7 @@ IOPL_LIB=-li386
 .if ${OS} == "Darwin"
 OBJCOPY=gobjcopy
 .if ${MACHINE_ARCH} == "amd64"
-IOPL_LIB=-lamd64
+IOPL_LIB=-lx86_64
 .elif ${MACHINE_ARCH} == "i386"
 IOPL_LIB=-li386
 .endif
