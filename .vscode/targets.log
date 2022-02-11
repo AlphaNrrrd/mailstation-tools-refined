@@ -7,16 +7,17 @@ make all --print-data-base --no-builtin-variables --no-builtin-rules --question
 
 # This program built for i386-apple-darwin11.3.0
  
-Makefile:22: *** missing separator.  Stop.
+Makefile:25: *** missing separator.  Stop.
  
 
-# Make data base, printed on Thu Feb 10 11:24:22 2022
+# Make data base, printed on Fri Feb 11 08:14:20 2022
 
 # Variables
 
 # automatic
 <D = $(patsubst %/,%,$(dir $<))
 # automatic
+ 
 ?F = $(notdir $?)
 # makefile (from `Makefile', line 9)
 OBJ = obj/
@@ -24,12 +25,11 @@ OBJ = obj/
 VSCODE_LOG_NATIVE = false
 # automatic
 ?D = $(patsubst %/,%,$(dir $?))
-# makefile (from `Makefile', line 20)
+# makefile (from `Makefile', line 23)
 .elif  = = "i386"
 # automatic
 @D = $(patsubst %/,%,$(dir $@))
 # automatic
- 
 @F = $(notdir $@)
 # makefile
 CURDIR := /Users/manamaster/Documents/GitHub/mailstation-tools-refined
@@ -52,11 +52,11 @@ VSCODE_VERBOSE_LOGGING = true
 # environment
 __CFBundleIdentifier = com.microsoft.VSCode
 # environment
-VSCODE_IPC_HOOK_EXTHOST = /var/folders/2j/l14z6zy16mg82tntqvddb5qh0000gn/T/vscode-ipc-f0ebd15d-6012-46f7-b1cf-a77482cddf9a.sock
+VSCODE_IPC_HOOK_EXTHOST = /var/folders/2j/l14z6zy16mg82tntqvddb5qh0000gn/T/vscode-ipc-ec0236cb-9262-40aa-b17d-a22532245a79.sock
 # environment
 VSCODE_CWD = /
 # environment
-PATH = /opt/local/bin:/opt/local/sbin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/Applications/VMware Fusion.app/Contents/Public:/usr/local/share/dotnet:~/.dotnet/tools:/Library/Apple/usr/bin:/Library/Frameworks/Mono.framework/Versions/Current/Commands:/Users/manamaster/development/flutter/bin:/usr/local/Cellar/openjdk@11/11.0.12/bin
+PATH = /opt/local/bin:/opt/local/sbin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/Applications/VMware Fusion.app/Contents/Public:/usr/local/share/dotnet:~/.dotnet/tools:/Library/Apple/usr/bin:/Library/Frameworks/Mono.framework/Versions/Current/Commands:/Users/manamaster/development/flutter/bin:/usr/local/Cellar/openjdk@11/11.0.12/bin:/Users/manamaster/development/flutter/bin:/usr/local/Cellar/openjdk@11/11.0.12/bin
 # environment
 VSCODE_LOG_STACK = false
 # environment
@@ -73,7 +73,7 @@ VSCODE_PIPE_LOGGING = true
 SDCC = sdcc -mz80
 # environment
 PWD = /Users/manamaster/Documents/GitHub/mailstation-tools-refined
-# makefile (from `Makefile', line 21)
+# makefile (from `Makefile', line 24)
 IOPL_LIB = -li386
 # environment
 ORIGINAL_XDG_CURRENT_DESKTOP = undefined
@@ -81,7 +81,7 @@ ORIGINAL_XDG_CURRENT_DESKTOP = undefined
 VSCODE_AMD_ENTRYPOINT = vs/workbench/services/extensions/node/extensionHostProcess
 # environment
 HOME = /Users/manamaster
-# makefile (from `Makefile', line 18)
+# makefile (from `Makefile', line 21)
 .if  = = "amd64"
 # default
 MAKEFILEPATH := /Applications/Xcode.app/Contents/Developer/Makefiles
@@ -104,6 +104,8 @@ MAKECMDGOALS := all
 # environment
 SHLVL = 1
 # environment
+LOCAL_GIT_DIRECTORY = /Applications/GitHub Desktop.app/Contents/Resources/app/git
+# environment
 JAVA_HOME = /usr/local/Cellar/openjdk@11/11.0.12
 # default
 MAKE_VERSION := 3.81
@@ -111,7 +113,6 @@ MAKE_VERSION := 3.81
 USER = manamaster
 # makefile
 .DEFAULT_GOAL := 
- 
 # automatic
 %D = $(patsubst %/,%,$(dir $%))
 # default
@@ -125,6 +126,7 @@ TMPDIR = /var/folders/2j/l14z6zy16mg82tntqvddb5qh0000gn/T/
 # environment
 VSCODE_IPC_HOOK = /Users/manamaster/Library/Application Support/Code/1.62.0-main.sock
 # makefile
+ 
 MAKEFLAGS = Rrqp
 # environment
 MFLAGS = -Rrqp
@@ -148,6 +150,8 @@ MAKEFILES :=
 LC_ALL = C
 # automatic
 ^F = $(notdir $^)
+# makefile (from `Makefile', line 20)
+OBJCOPY = objcopy
 # default
 SUFFIXES := 
 # default
@@ -157,9 +161,9 @@ MAKELEVEL := 0
 # environment
 LANG = C
 # environment
-VSCODE_PID = 49068
+VSCODE_PID = 54777
 # variable set hash-table stats:
-# Load=71/1024=7%, Rehash=0, Collisions=6/95=6%
+# Load=73/1024=7%, Rehash=0, Collisions=8/98=8%
 
 # Pattern-specific Variable Values
 
@@ -167,9 +171,9 @@ VSCODE_PID = 49068
 
 # Directories
 
-# . (device 16777225, inode 6735617): 17 files, no impossibilities.
+# . (device 16777225, inode 6735617): 18 files, no impossibilities.
 
-# 17 files, no impossibilities in 1 directories.
+# 18 files, no impossibilities in 1 directories.
 
 # Implicit Rules
 
@@ -215,6 +219,6 @@ Makefile:
 # strcache size: total = 4096 / max = 4096 / min = 4096 / avg = 4096
 # strcache free: total = 4087 / max = 4087 / min = 4087 / avg = 4087
 
-# Finished Make data base on Thu Feb 10 11:24:22 2022
+# Finished Make data base on Fri Feb 11 08:14:20 2022
 
  

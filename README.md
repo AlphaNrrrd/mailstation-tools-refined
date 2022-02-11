@@ -71,39 +71,8 @@ On OpenBSD, direct port access will require the `machdep.allowaperture` sysctl
 set to `1` or higher.  On OpenBSD and Linux, these host tools will also have
 to be executed as root.
 
-### USB Loader with Teensy
-
-If you don't have a computer with a parallel port, you can use a
-[Teensy 3.2](https://www.pjrc.com/store/teensy32.html)
-which will connect to your computer via USB, and to the Mailstation via its
-many digital I/O pins:
-
-|Teensy Pin|Mailstation Pin|
-|----------|---------------|
-|1|2|
-|2|3|
-|3|4|
-|4|5|
-|5|6|
-|7|10|
-|8|11|
-|9|12|
-|10|13|
-|11|15|
-|GND|25|
-
-- Install [Arduino-Makefile](https://github.com/sudar/Arduino-Makefile) and
-[Teensyduino](https://www.pjrc.com/teensy/teensyduino.html)
-
-- `cd teensy-loader && make` (`gmake` on OpenBSD)
-
-- Upload `build-*/teensy-loader_.hex` firmware with `teensyloader` and Teensy
-will reattach as a USB serial device:
-
-````
-umodem0 at uhub0 port 4 configuration 1 interface 0 "jcs Mailstation Loader" rev 1.10/2.75 addr 9
-ucom0 at umodem0
-````
+### Teensy Loader
+Code for the Teensy Parallel loader is included at the original repo at JCS's page on github.
 
 ### Included host-side tools in `util/`
 
