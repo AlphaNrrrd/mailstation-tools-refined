@@ -2,7 +2,7 @@
 Original Repo created by jcs(https://github.com/jcs) ported to other OS's and improved by manamster(https://github.com/manamster)
 
 This is a collection of tools for working with Cidco Mailstation devices
-(primarily the DET1), either on Windows, MacOS, or Linux.
+(primarily the DET1), either on OpenBSD or Linux.
 
 It was mostly pieced together from the now-defunct
 [mailstation Yahoo Group](https://groups.yahoo.com/neo/groups/mailstation/info)
